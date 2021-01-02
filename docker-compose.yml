@@ -19,8 +19,8 @@ services:
   sqlserver:
     build: SqlServer
     container_name: ConferencePlanner.SqlServer
-#    ports:
-#      - '1433:1433'
+    ports:
+      - '1433:1433'
     environment:
       - 'SA_PASSWORD=z28KH6y^LF()UxQ'
       - 'ACCEPT_EULA=Y'
