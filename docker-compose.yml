@@ -11,5 +11,17 @@ services:
       - ASPNETCORE_HTTPS_PORT=8001
       - ASPNETCORE_Kestrel__Certificates__Default__Password=Pa55w0rd!
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/ConferencePlanner.BackEnd.pfx
+      - "ConnectionStrings:DefaultConnection=Server=sqlserver;Database=BackEnd;MultipleActiveResultSets=true;User Id=myUsername;Password=zWPYAjHbH3W7k#;"
     volumes:
-      - '/home/arno/.aspnet/https:/https/'    
+      - '/home/arno/.aspnet/https:/https/'
+    depends_on:
+      - sqlserver
+  sqlserver:
+    build: SqlServer
+    container_name: ConferencePlanner.SqlServer
+#    ports:
+#      - '1433:1433'
+    environment:
+      - 'SA_PASSWORD=z28KH6y^LF()UxQ'
+      - 'ACCEPT_EULA=Y'
+      - 'MSSQL_PID=Express'
