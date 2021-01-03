@@ -48,6 +48,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/BackEnd/Controllers/SearchController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/BackEnd/Controllers/SpeakersController.cs">
           <value>
             <set />
@@ -98,6 +103,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/ConferenceDTO/SearchResult.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ConferenceDTO/SearchTerm.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/FrontEnd/Dockerfile">
           <value>
             <set />
@@ -113,12 +128,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Pages/Search.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Pages/Search.cshtml.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/FrontEnd/Pages/Session.cshtml">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/FrontEnd/Pages/Session.cshtml.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Pages/Shared/_Layout.cshtml">
           <value>
             <set />
           </value>
