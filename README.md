@@ -15,3 +15,4 @@ Sessies
 | Sessie | Onderwerp |
 | ------ | --------- |
 | [Sessie 1](1.%20Bouwen%20backend%20en%20EF%20model.md) | Bouwen van backend API met basis EF model |
+| [Sessie 2](2.%20Uitbouwen%20en%20refactoring%20Back%20End.md) | Aanpassingen backend API |
