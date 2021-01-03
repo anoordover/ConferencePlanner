@@ -28,3 +28,5 @@ if not exists(select *
         GRANT CREATE TABLE TO myUsername as dbo;
     end;
 GO
+
+GRANT SELECT, UPDATE, DELETE, INSERT, REFERENCES ON SCHEMA::dbo TO myUsername;
