@@ -1,11 +1,12 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using BackEnd.Data;
+using BackEnd.Infrastructure;
+using ConferenceDTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BackEnd.Models;
+using Speaker = BackEnd.Data.Speaker;
 
 namespace BackEnd.Controllers
 {
@@ -22,14 +23,19 @@ namespace BackEnd.Controllers
 
         // GET: api/Speakers
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Speaker>>> GetSpeakers()
+        public async Task<List<SpeakerResponse>> GetSpeakers()
         {
-            return await _context.Speakers.ToListAsync();
+            var speakers = await _context.Speakers.AsNoTracking()
+                .Include(s => s.SessionSpeakers)
+                .ThenInclude(ss => ss.Session)
+                .Select(s => s.MapSpeakerResponse())
+                .ToListAsync();
+            return speakers;        
         }
 
         // GET: api/Speakers/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Speaker>> GetSpeaker(int id)
+        public async Task<ActionResult<SpeakerResponse>> GetSpeaker(int id)
         {
             var speaker = await _context.Speakers.FindAsync(id);
 
@@ -38,67 +44,7 @@ namespace BackEnd.Controllers
                 return NotFound();
             }
 
-            return speaker;
-        }
-
-        // PUT: api/Speakers/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutSpeaker(int id, Speaker speaker)
-        {
-            if (id != speaker.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(speaker).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SpeakerExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/Speakers
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
-        public async Task<ActionResult<Speaker>> PostSpeaker(Speaker speaker)
-        {
-            _context.Speakers.Add(speaker);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetSpeaker", new { id = speaker.Id }, speaker);
-        }
-
-        // DELETE: api/Speakers/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Speaker>> DeleteSpeaker(int id)
-        {
-            var speaker = await _context.Speakers.FindAsync(id);
-            if (speaker == null)
-            {
-                return NotFound();
-            }
-
-            _context.Speakers.Remove(speaker);
-            await _context.SaveChangesAsync();
-
-            return speaker;
+            return speaker.MapSpeakerResponse();
         }
 
         private bool SpeakerExists(int id)

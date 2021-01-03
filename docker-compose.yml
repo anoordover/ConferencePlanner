@@ -1,7 +1,9 @@
 version: '3.3'
 services:
   backend:
-    build: BackEnd
+    build:
+      context: .
+      dockerfile: BackEnd/Dockerfile
     container_name: ConferencePlanner.BackEnd
     ports:
       - '8000:80'

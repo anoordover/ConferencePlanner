@@ -28,7 +28,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/2. Uitbouwen en refactoring Back End.md">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/BackEnd/.dockerignore">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/BackEnd/Controllers/AttendeesController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/BackEnd/Controllers/SpeakersController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/BackEnd/Data/DataLoader.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/BackEnd/Data/DevIntersectionLoader.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/BackEnd/Data/SessionizeLoader.cs">
           <value>
             <set />
           </value>
