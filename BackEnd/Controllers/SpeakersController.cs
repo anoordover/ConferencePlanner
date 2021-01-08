@@ -6,7 +6,6 @@ using BackEnd.Infrastructure;
 using ConferenceDTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Speaker = BackEnd.Data.Speaker;
 
 namespace BackEnd.Controllers
 {

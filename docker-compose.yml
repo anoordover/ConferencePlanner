@@ -18,6 +18,24 @@ services:
       - '/home/arno/.aspnet/https:/https/'
     depends_on:
       - sqlserver
+  frontend:
+    build:
+      context: .
+      dockerfile: FrontEnd/Dockerfile
+    container_name: ConferencePlanner.FrontEnd
+    ports:
+      - '8002:80'
+      - '8003:443'
+    environment:
+      - ASPNETCORE_URLS=https://+;http://+
+      - ASPNETCORE_HTTPS_PORT=8003
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=Pa55w0rd!
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/ConferencePlanner.FrontEnd.pfx
+      - "ServiceUrl=https://backend:443/"
+    volumes:
+      - '/home/arno/.aspnet/https:/https/'
+    depends_on:
+      - backend
   sqlserver:
     build: SqlServer
     container_name: ConferencePlanner.SqlServer
