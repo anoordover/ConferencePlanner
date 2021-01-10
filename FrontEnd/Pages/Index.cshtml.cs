@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ConferenceDTO;
 using FrontEnd.Infrastructure;
 using FrontEnd.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
@@ -20,6 +21,11 @@ namespace FrontEnd.Pages
 
         public int CurrentDayOffset { get; set; }
         public bool IsAdmin { get; set; }        
+        
+        [TempData]
+        public string Message { get; set; }
+
+        public bool ShowMessage => !string.IsNullOrEmpty(Message);
         public IndexModel(IApiClient apiClient, ILogger<IndexModel> logger)
         {
             _logger = logger;
