@@ -59,7 +59,7 @@ namespace FrontEnd.Services
 
         public async Task PutSessionAsync(Session session)
         {
-            var response = await _httpClient.PutAsJsonAsync($"{SessionsUri}", session);
+            var response = await _httpClient.PutAsJsonAsync($"{SessionsUri}/{session.Id}", session);
             response.EnsureSuccessStatusCode();
         }
 

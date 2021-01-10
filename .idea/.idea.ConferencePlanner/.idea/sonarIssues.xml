@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="/Immediate Window">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/a.sql">
           <value>
             <set />
@@ -113,7 +118,72 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Areas/Identity/ClaimsPrincipalFactory.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Areas/Identity/Data/IdentityDbContext.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Areas/Identity/Data/User.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Areas/Identity/IdentityHostingStartup.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Areas/Identity/Pages/Account/Register.cshtml.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/FrontEnd/Dockerfile">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/FrontEnd.csproj">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Infrastructure/AuthConstants.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Infrastructure/AuthnHelpers.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Infrastructure/AuthzHelpers.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Pages/Admin/EditSession.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Pages/Admin/EditSession.cshtml.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Pages/EditSessions.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Pages/EditSessions.cshtml.cs">
           <value>
             <set />
           </value>
@@ -163,7 +233,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Services/AdminService.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/FrontEnd/Services/ApiClient.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Services/IAdminService.cs">
           <value>
             <set />
           </value>

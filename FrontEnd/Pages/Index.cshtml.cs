@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ConferenceDTO;
+using FrontEnd.Infrastructure;
 using FrontEnd.Services;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -18,7 +19,7 @@ namespace FrontEnd.Pages
         public IEnumerable<(int Offset, DayOfWeek? DayofWeek)> DayOffsets { get; set; }
 
         public int CurrentDayOffset { get; set; }
-        
+        public bool IsAdmin { get; set; }        
         public IndexModel(IApiClient apiClient, ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -27,6 +28,8 @@ namespace FrontEnd.Pages
 
         public async Task OnGet(int day = 0)
         {
+            IsAdmin = User.IsAdmin();
+            
             CurrentDayOffset = day;
 
             var sessions = await _apiClient.GetSessionsAsync();
