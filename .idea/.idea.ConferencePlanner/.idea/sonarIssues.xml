@@ -43,6 +43,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/4. toevoegen auth.md">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/BackEnd/.dockerignore">
           <value>
             <set />
@@ -233,6 +238,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/Pages/_ViewImports.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/FrontEnd/Services/AdminService.cs">
           <value>
             <set />
@@ -254,6 +264,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/FrontEnd/Startup.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FrontEnd/TagHelpers/AuthzTagHelper.cs">
           <value>
             <set />
           </value>
