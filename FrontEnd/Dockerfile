@@ -14,4 +14,11 @@ COPY --from=build-env /app/out .
 COPY ca_bundle.crt /usr/local/share/ca-certificates/your_ca.crt
 RUN update-ca-certificates
 
+# Create non-root user and set permissions
+RUN (which useradd || apt-get update && apt-get install -y useradd) && \
+    (useradd -u 1000 appuser || true) && \
+    (chown -R 1000:1000 /app)
+
+USER 1000
+
 ENTRYPOINT ["dotnet", "FrontEnd.dll"]
