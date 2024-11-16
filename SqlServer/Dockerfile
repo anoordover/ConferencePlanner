@@ -11,4 +11,12 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app
 RUN chmod +x /usr/src/app/run-initialization.sh
 
+# Create non-root user and set permissions
+RUN (which useradd || apt-get update && apt-get install -y useradd) && \
+    (useradd -u 1000 appuser || true) && \
+    (chown -R 1000:1000 /usr/src/app)
+
+# Switch to non-root user
+USER 1000
+
 CMD /bin/bash ./entrypoint.sh
